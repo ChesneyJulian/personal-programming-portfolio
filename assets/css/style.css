@@ -2,8 +2,8 @@
 html, * {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 200;
-    font-size: 100;
     color:rgb(6, 46, 29);
+    
     
 }
 /* add color, flex, and sizing to header element */
@@ -28,14 +28,11 @@ h1 {
     display: flex;
     flex-flow: row wrap;
     align-self: flex-end;
-    
 }
 
 .nav-links a {
-    display: flex;
     color: white;
     text-decoration: none;
-    transition: all, 2s, 1s, ease-in-out;
     margin: 10px;
 }
 /* add hover color and cursor modifier for nav links */
@@ -49,8 +46,8 @@ main {
     height: 100vh;
     display: flex;
     flex-flow: column wrap;
-    justify-content:flex-start;
-    align-content:space-between;
+    align-items: flex-start;
+    justify-content:space-evenly;
     background-image: linear-gradient(to top, rgba(14, 73, 14, 0.69), rgba(124, 202, 124, 0.42));
 }
 /* add flex positioning for article elements within main to make them align in a row with space between child items */
@@ -61,10 +58,6 @@ article {
     justify-content: space-between;
     align-items: flex-start;
 }
-
-section {
-
-} 
 /* remove h2 margin and padding to align with top of flex box */
 h2 {
     font-size: 200%;
@@ -77,18 +70,46 @@ article p {
     width: 60%;
     justify-items: flex-start;
 }
+aside {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    max-height: 250px;
+    padding: 10px;
+    margin: 10px;
+   
+}
+/* add flex and width properties for section */
+.work {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 65%;
+} 
+/* add flex so img can be flex */
+section a {
+    display:flex;
+} 
+.box {
+    display: flex;
+    
+}
+.side-boxes {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    display: flex;
+    align-items: flex-start; 
+    width: 100%;
+    /* margin: 10px; */
+}
 
-
-/* #box-1 {
-    height: 30vh;
-    padding: 2px;
-    align-self: center;
-} */
-
-/* #box-2, #box-3, #box-4 {
-    height: 15vh;
-} */
-
+#box-big {
+    height: 250px;
+     /* margin: 20px; */
+    order: -1;
+    
+}
 
 footer {
     display: flex;
