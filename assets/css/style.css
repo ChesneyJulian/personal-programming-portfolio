@@ -1,3 +1,4 @@
+/* add basic text stylings to apply to all elements */
 html, * {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 200;
@@ -5,10 +6,9 @@ html, * {
     color:rgb(6, 46, 29);
     
 }
-
+/* add color, flex, and sizing to header element */
 header {
     background-color: rgba(14, 73, 14, 0.695);
-    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -16,6 +16,7 @@ header {
     padding: 10px;
     height: 15vh;
 }
+/* style text, margin, and padding to main header */
 h1 {
     font-size: 50px;
     margin: 10px;
@@ -25,65 +26,68 @@ h1 {
 
 .nav-links {
     display: flex;
-    flex-direction: column;
-    padding: 10px;
+    flex-flow: row wrap;
+    align-self: flex-end;
+    
 }
 
 .nav-links a {
+    display: flex;
     color: white;
     text-decoration: none;
     transition: all, 2s, 1s, ease-in-out;
+    margin: 10px;
 }
-
+/* add hover color and cursor modifier for nav links */
 .nav-links a:hover {
     color: rgb(6, 46, 29);
     cursor:grab;
 }
-
+/* add height and width to full vh, add display flex, align child elements to column with space between. add linear gradient background */
 main {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
-    flex-direction: column; 
+    flex-flow: column wrap;
+    justify-content:flex-start;
+    align-content:space-between;
     background-image: linear-gradient(to top, rgba(14, 73, 14, 0.69), rgba(124, 202, 124, 0.42));
 }
-
+/* add flex positioning for article elements within main to make them align in a row with space between child items */
 article {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     padding: 5%;
-    
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 section {
-   
-    flex-flow: row wrap; */
-    margin: 10px;
-} 
 
+} 
+/* remove h2 margin and padding to align with top of flex box */
 h2 {
-    padding: 10px;
-    margin: 10px;
     font-size: 200%;
     color: white;
 }
-
-.content {
-    margin-left: 35%;
-    padding: 10px;
-    
-
+/* add display flex and align element to flex-end with width to 60% to move text to right 60% of screen */
+article p {
+    display: flex;
+    align-self: flex-end;
+    width: 60%;
+    justify-items: flex-start;
 }
-#box-1 {
+
+
+/* #box-1 {
     height: 30vh;
     padding: 2px;
     align-self: center;
-}
+} */
 
-#box-2, #box-3, #box-4 {
+/* #box-2, #box-3, #box-4 {
     height: 15vh;
-}
+} */
 
 
 footer {
