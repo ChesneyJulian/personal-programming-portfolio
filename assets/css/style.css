@@ -6,15 +6,24 @@ html, * {
     
     
 }
+body {
+    display: flex;
+    flex-flow: column wrap;
+}
 /* add color, flex, and sizing to header element */
 header {
     background-color: rgba(14, 73, 14, 0.695);
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 10px;
     height: 15vh;
+   
+}
+.personal-info {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
 }
 /* style text, margin, and padding to main header */
 h1 {
@@ -23,11 +32,15 @@ h1 {
     padding: 5px;
     color: white;
 }
-
+#avatar {
+    width: 10%;
+    border-radius: 125px;
+}
 .nav-links {
     display: flex;
     flex-flow: row wrap;
     align-self: flex-end;
+    justify-content: space-evenly;
 }
 
 .nav-links a {
@@ -65,28 +78,17 @@ h2 {
 }
 /* add display flex and align element to flex-end with width to 60% to move text to right 60% of screen */
 article p {
-    display: flex;
-    align-self: flex-end;
     width: 60%;
-    justify-items: flex-start;
 }
 aside {
     display: flex;
-    justify-content: flex-start;
-    width: 50%;
-    max-height: 250px;
+    flex-flow:row wrap;
+    justify-content: space-evenly;
     padding: 10px;
     margin: 10px;
    
 }
-/* add flex and width properties for section */
-.work {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 65%;
-} 
+
 /* add flex so img can be flex */
 section a {
     display:flex;
@@ -100,8 +102,10 @@ section a {
     justify-content: space-between;
     display: flex;
     align-items: flex-start; 
-    width: 100%;
+    width: 25%;
     /* margin: 10px; */
+}
+.side-boxes img {
 }
 
 #box-big {
