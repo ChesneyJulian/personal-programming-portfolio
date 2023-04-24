@@ -20,6 +20,7 @@ header {
     height: 15vh;
    
 }
+/* style to group this content together with flex */
 .personal-info {
     display: flex;
     flex-direction: row;
@@ -32,6 +33,7 @@ h1 {
     padding: 5px;
     color: white;
 }
+/* style avatar photo dimensions and rounded corners */
 #avatar {
     width: 10%;
     border-radius: 125px;
@@ -80,40 +82,54 @@ h2 {
 article p {
     width: 60%;
 }
-aside {
+.work {
     display: flex;
     flex-flow:row wrap;
-    justify-content: space-evenly;
-    padding: 10px;
+    justify-content: space-between;
     margin: 10px;
+    width: 90%;
    
 }
+section {
+    display: flex;
+    width: 75%;
+}
 
-/* add flex so img can be flex */
-section a {
-    display:flex;
-} 
-.box {
+.work a {
     display: flex;
-    
+    transition: all .5s ease-in-out;
 }
-.side-boxes {
+
+.work a:hover {
+    transform: scale(1.2);
+}
+article img {
+    display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    display: flex;
-    align-items: flex-start; 
-    width: 25%;
-    /* margin: 10px; */
+    height: 100px;
+    padding: 10px;
 }
-.side-boxes img {
+
+.box {
+    width:fit-content;
 }
 
 #box-big {
     height: 250px;
-     /* margin: 20px; */
+    margin: 20px;
     order: -1;
-    
+    display: flex;
 }
+
+.side-boxes {
+    display: flex;
+    flex-flow: row wrap; 
+    align-items: center;
+    
+    width: fit-content;
+}
+
+
 
 footer {
     display: flex;
