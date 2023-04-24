@@ -2,17 +2,17 @@
 html, * {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 200;
-    color:rgb(6, 46, 29);
-    
-    
+    color:white;
 }
+
 body {
     display: flex;
     flex-flow: column wrap;
 }
+
 /* add color, flex, and sizing to header element */
 header {
-    background-color: rgba(14, 73, 14, 0.695);
+    background-color: rgba(11, 31, 11, 0.657);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,24 +20,27 @@ header {
     height: 15vh;
    
 }
+
 /* style to group this content together with flex */
 .personal-info {
     display: flex;
     flex-direction: row;
     width: 60%;
 }
+
 /* style text, margin, and padding to main header */
 h1 {
     font-size: 50px;
     margin: 10px;
     padding: 5px;
-    color: white;
 }
+
 /* style avatar photo dimensions and rounded corners */
 #avatar {
     width: 10%;
     border-radius: 125px;
 }
+
 .nav-links {
     display: flex;
     flex-flow: row wrap;
@@ -46,13 +49,13 @@ h1 {
 }
 
 .nav-links a {
-    color: white;
     text-decoration: none;
     margin: 10px;
 }
+
 /* add hover color and cursor modifier for nav links */
-.nav-links a:hover {
-    color: rgb(6, 46, 29);
+a:hover {
+    color:rgb(6, 46, 29);
     cursor:grab;
 }
 /* add height and width to full vh, add display flex, align child elements to column with space between. add linear gradient background */
@@ -63,7 +66,7 @@ main {
     flex-flow: column wrap;
     align-items: flex-start;
     justify-content:space-evenly;
-    background-image: linear-gradient(to top, rgba(14, 73, 14, 0.69), rgba(124, 202, 124, 0.42));
+    background-image: linear-gradient(to top, rgba(13, 56, 13, 0.69), rgba(202, 207, 202, 0.42));
 }
 /* add flex positioning for article elements within main to make them align in a row with space between child items */
 article {
@@ -76,30 +79,29 @@ article {
 /* remove h2 margin and padding to align with top of flex box */
 h2 {
     font-size: 200%;
-    color: white;
+    
 }
 /* add display flex and align element to flex-end with width to 60% to move text to right 60% of screen */
 article p {
     width: 60%;
+    color:rgb(6, 46, 29);
 }
+
 .work {
-    display: flex;
-    flex-flow:row wrap;
-    justify-content: space-between;
     margin: 10px;
     width: 90%;
    
 }
-section {
+.projects {
     display: flex;
     width: 75%;
 }
-
+/* add display for project links and transition presets */
 .work a {
     display: flex;
     transition: all .5s ease-in-out;
 }
-
+/* add transform for when project link is hovered over */
 .work a:hover {
     transform: scale(1.2);
 }
@@ -108,6 +110,7 @@ article img {
     flex-flow: row wrap;
     height: 100px;
     padding: 10px;
+    border-radius: 20px;
 }
 
 .box {
@@ -125,7 +128,6 @@ article img {
     display: flex;
     flex-flow: row wrap; 
     align-items: center;
-    
     width: fit-content;
 }
 
@@ -135,8 +137,9 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    background-color: rgba(10, 24, 12, 0.674);
+    background-color:rgb(6, 46, 29);
     padding: 2%;
+    
 }
 
 footer ul {
