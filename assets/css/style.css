@@ -97,16 +97,16 @@ h2 {
     width: 75%;
 }
 /* add display for project links and transition presets */
-.work a {
+.projects a {
     display: flex;
     transition: all .5s ease-in-out;
 }
 /* add transform for when project link is hovered over */
-.work a:hover {
+.projects a:hover {
     transform: scale(1.2);
 }
 
-.work img {
+.projects img {
     display: flex;
     flex-flow: row wrap;
     height: 100px;
@@ -114,13 +114,15 @@ h2 {
     border-radius: 20px;
 }
 
+
+
 .box {
     width:fit-content;
 }
 
 #box-big {
     height: 250px;
-    margin: 20px;
+    /* margin: 20px; */
     order: -1;
     display: flex;
 }
