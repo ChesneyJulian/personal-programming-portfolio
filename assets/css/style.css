@@ -47,6 +47,7 @@ h1 {
     flex-flow: row wrap;
     align-self: flex-end;
     justify-content: space-evenly;
+    
 }
 
 .nav-links a {
@@ -61,7 +62,7 @@ a:hover {
 }
 /* add height and width to full vh, add display flex, align child elements to column with space between. add linear gradient background */
 main {
-    width: 100%;
+    /* width: 100%; */
     height: 100vh;
     display: flex;
     flex-flow: column wrap;
@@ -107,19 +108,22 @@ h2 {
     transform: scale(1.2);
 }
 
-.projects img {
+.projects div {
     display: flex;
     flex-flow: row wrap;
     height: 100px;
     padding: 10px;
+    margin: 10px;
     border-radius: 20px;
 }
 
 .overlay {
+   max-width: fit-content;
+   background-color: rgba(0, 0, 0, 0.649);
    display: flex;
-   color: white;
-   background-color: rgba(0, 0, 0, 0.5);
-   text-align: center;
+   flex-flow: row wrap;
+   align-items: center;
+
 }
 
 
@@ -129,8 +133,10 @@ h2 {
 
 #box-big {
     height: 250px;
+    width: 350px;
     order: -1;
     display: flex;
+    background-image: url("../images/green-blur-gradient.jpg");
 }
 
 .side-boxes {
@@ -139,6 +145,21 @@ h2 {
     align-items: center;
     height: 270px;
     width: fit-content;
+}
+
+#prework {
+    background-image: url("../images/blue-gradient.jpg");
+    width: 95px;
+}
+
+#cheat-sheet {
+    background-image: url("../images/purple-gradient.webp");
+    width: 95px;
+}
+
+#placeholder {
+    background-image: url("../images/placeholder-img.png");
+    width: 95px;
 }
 
 footer {
@@ -173,9 +194,14 @@ footer ul li {
         justify-content: center;
     }
     #avatar {
-        
-        width:10%;
+        width:20%;
+        height: 100px;
         border-radius: 125px;
-        flex: 0 1 10%;
+        flex: 0 0 10%;
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+        
     }
 }
