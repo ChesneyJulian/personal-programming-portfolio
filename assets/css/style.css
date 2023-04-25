@@ -39,6 +39,7 @@ h1 {
 #avatar {
     width: 10%;
     border-radius: 125px;
+    flex: 0 1 10%;
 }
 
 .nav-links {
@@ -114,6 +115,12 @@ h2 {
     border-radius: 20px;
 }
 
+.overlay {
+   display: flex;
+   color: white;
+   background-color: rgba(0, 0, 0, 0.5);
+   text-align: center;
+}
 
 
 .box {
@@ -122,7 +129,6 @@ h2 {
 
 #box-big {
     height: 250px;
-    /* margin: 20px; */
     order: -1;
     display: flex;
 }
@@ -131,6 +137,7 @@ h2 {
     display: flex;
     flex-flow: row wrap; 
     align-items: center;
+    height: 270px;
     width: fit-content;
 }
 
@@ -156,3 +163,19 @@ footer ul li {
     align-self: center;
 }
 
+/* adjust styling and colors for screen media max width 992 */
+@media screen and (max-width: 992px) {
+    header {
+        background-color: rgba(40, 37, 63, 0.889);
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    #avatar {
+        
+        width:10%;
+        border-radius: 125px;
+        flex: 0 1 10%;
+    }
+}
