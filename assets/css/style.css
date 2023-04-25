@@ -62,7 +62,7 @@ a:hover {
 }
 /* add height and width to full vh, add display flex, align child elements to column with space between. add linear gradient background */
 main {
-    /* width: 100%; */
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-flow: column wrap;
@@ -84,9 +84,10 @@ h2 {
     
 }
 /* add display flex and align element to flex-end with width to 60% to move text to right 60% of screen */
- .about p {
+.about p {
     width: 60%;
     color:rgb(6, 46, 29);
+    text-align: justify;
 }
 
 .work {
@@ -190,18 +191,82 @@ footer ul li {
         background-color: rgba(40, 37, 63, 0.889);
         display: flex;
         flex-flow: row wrap;
-        align-items: center;
+        align-content: center;
         justify-content: center;
     }
+
     #avatar {
         width:20%;
         height: 100px;
         border-radius: 125px;
         flex: 0 0 10%;
     }
-    .about {
+
+    .nav-links {
         display: flex;
-        flex-direction: column;
-        
+        flex-flow: column wrap;
+        align-items: center;
     }
+    
+    .nav-links a {
+        text-decoration: none;
+        margin: 5px;
+    }
+
+    a:hover {
+        color:rgb(57, 4, 107);
+        cursor:grab;
+    }
+
+    main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        justify-content: flex-start;
+        background-image: linear-gradient(to top, rgba(30, 6, 40, 0.69), rgba(214, 197, 227, 0.42));
+    }
+
+    article {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        color: rgb(30, 6, 40,);
+    }
+
+    article h2 {
+        display: flex;
+        margin: 10px;
+        padding: 10px;
+   }
+
+    .work {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .projects {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .projects div {
+        display: flex;
+        flex-flow: column wrap;
+        height: 100px;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 20px;
+    }
+   
+    #box-big {
+        height: 250px;
+        width: 660px;
+        order: -1;
+        display: flex;
+        align-self: center;
+        background-image: url("../images/green-blur-gradient.jpg");
+    }
+
 }
