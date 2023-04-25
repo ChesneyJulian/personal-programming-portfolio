@@ -82,7 +82,7 @@ h2 {
     
 }
 /* add display flex and align element to flex-end with width to 60% to move text to right 60% of screen */
-article p {
+ .about p {
     width: 60%;
     color:rgb(6, 46, 29);
 }
@@ -105,7 +105,8 @@ article p {
 .work a:hover {
     transform: scale(1.2);
 }
-article img {
+
+.work img {
     display: flex;
     flex-flow: row wrap;
     height: 100px;
@@ -130,8 +131,6 @@ article img {
     align-items: center;
     width: fit-content;
 }
-
-
 
 footer {
     display: flex;
