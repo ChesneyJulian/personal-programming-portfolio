@@ -1,9 +1,11 @@
 /* add basic text stylings to apply to all elements */
-html, * {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+html,
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 200;
-    color:white;
+    color: white;
 }
+
 /* set display flex, column wrap, add padding around all of body, add background image linear gradient */
 body {
     display: flex;
@@ -44,7 +46,7 @@ h1 {
 }
 
 .nav-links {
-    display: flex; 
+    display: flex;
 }
 
 .nav-links a {
@@ -55,8 +57,8 @@ h1 {
 
 /* add hover color and cursor modifier for nav links */
 .nav-links a:hover {
-    color:rgba(5, 218, 126, 0.871);
-    cursor:grab;
+    color: rgba(5, 218, 126, 0.871);
+    cursor: grab;
 }
 
 /* add min height to 100 vh, add display flex, align child elements to column with space evenly. */
@@ -85,7 +87,7 @@ h2 {
 .about p {
     margin-left: 500px;
     margin-right: 80px;
-    color:rgb(6, 46, 29);
+    color: rgb(6, 46, 29);
     text-align: justify;
 }
 
@@ -111,27 +113,27 @@ h2 {
     padding: 5px;
     display: flex;
     flex-flow: row wrap;
-    
+
 }
 
- .box img {
+.box img {
     position: relative;
     max-width: 100%;
     border-radius: 50px;
 }
 
 .overlay {
-   background-color: rgba(9, 110, 95, 0.789);
-   position:absolute;
-   margin-left: 5px;
-   padding: 7px;
-   display: flex;
-   align-self: center;
+    background-color: rgba(9, 110, 95, 0.789);
+    position: absolute;
+    margin-left: 5px;
+    padding: 7px;
+    display: flex;
+    align-self: center;
 }
 
-#box-big img{
+#box-big img {
     border-radius: 50px;
-    padding:5px;
+    padding: 5px;
     position: relative;
 }
 
@@ -140,15 +142,16 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
-    background-color:rgb(6, 46, 29);
+    background-color: rgb(6, 46, 29);
     padding: 2%;
 }
+
 footer .nav-links {
     align-self: center;
 }
 
 
-/* adjust styling and colors for screen media max width 992 */ 
+/* adjust styling and colors for screen media max width 992 */
 @media screen and (max-width: 992px) {
     header {
         flex-flow: row wrap;
@@ -177,6 +180,25 @@ footer .nav-links {
 
     .box {
         max-width: 30%;
-        align-self:baseline;
+        align-self: baseline;
     }
+}
+
+@media screen and (max-width: 390px) {
+    body {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    #avatar {
+        height: 100px;
+        width: auto;
+        border-radius: 125px;
+        align-self: center;
+    }
+    
+    main {
+        max-width: 100%;
+    }
+
 }
