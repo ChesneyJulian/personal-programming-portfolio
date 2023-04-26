@@ -99,6 +99,7 @@ h2 {
 }
 
 .boxes a {
+    display: flex;
     transition: all .5s ease-in-out;
 }
 
@@ -122,14 +123,16 @@ h2 {
 .overlay {
    background-color: rgba(9, 110, 95, 0.789);
    position:absolute;
-   bottom: 50%;
    margin-left: 5px;
    padding: 7px;
+   display: flex;
+   align-self: center;
 }
 
 #box-big img{
     border-radius: 50px;
     padding:5px;
+    position: relative;
 }
 
 
@@ -167,12 +170,13 @@ footer .nav-links {
     }
 
     .boxes {
+        position: relative;
         flex-flow: row wrap;
         align-items: center;
     }
 
     .box {
         max-width: 30%;
-        align-self: baseline;
+        align-self:baseline;
     }
 }
