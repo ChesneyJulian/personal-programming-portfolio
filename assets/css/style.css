@@ -4,7 +4,7 @@ html, * {
     font-weight: 200;
     color:white;
 }
-
+/* set display flex, column wrap, add padding around all of body, add background image linear gradient */
 body {
     display: flex;
     flex-flow: column wrap;
@@ -13,7 +13,7 @@ body {
     background-image: linear-gradient(to top, rgba(13, 56, 13, 0.69), rgba(202, 207, 202, 0.42));
 }
 
-/* add color, flex, and sizing to header element */
+/* add background color, flex, and sizing to header element */
 header {
     background-color: rgba(11, 31, 11, 0.657);
     display: flex;
@@ -44,15 +44,12 @@ h1 {
 }
 
 .nav-links {
-    display: flex;
-    justify-content: space-evenly;
-    
+    display: flex; 
 }
 
 .nav-links a {
     text-decoration: none;
     margin: 10px;
-    align-self: baseline;
     text-align: center;
 }
 
@@ -62,7 +59,7 @@ h1 {
     cursor:grab;
 }
 
-/* add height and width to full vh, add display flex, align child elements to column with space between. add linear gradient background */
+/* add min height to 100 vh, add display flex, align child elements to column with space evenly. */
 main {
     margin: 20px;
     min-height: 100vh;
@@ -81,13 +78,12 @@ article {
     align-items: flex-start;
 }
 
-/* remove h2 margin and padding to align with top of flex box */
 h2 {
     font-size: 200%;
     padding: 3%;
 }
 
-/* add display flex and align element to flex-end with width to 60% to move text to right 60% of screen */
+/* add margin-left and right to position p, change color and text alignment*/
 .about p {
     margin-left: 500px;
     margin-right: 80px;
@@ -95,9 +91,9 @@ h2 {
     text-align: justify;
 }
 
-.work {
+/* .work {
     width: 100%;
-}
+} */
 
 .boxes {
     position: relative;
@@ -113,8 +109,7 @@ h2 {
 }
 
 .box {
-    width: 30%;
-    padding: 10px;
+    padding: 5px;
     display: flex;
     flex-flow: row wrap;
     
@@ -124,13 +119,11 @@ h2 {
     position: relative;
     max-width: 100%;
     border-radius: 50px;
-    /* padding: 8px; */
 }
 
 .overlay {
    background-color: rgba(9, 110, 95, 0.789);
    position:absolute;
-   max-width: inherit;
    bottom: 50%;
    margin-left: 5px;
    padding: 7px;

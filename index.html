@@ -24,12 +24,11 @@
             <a href="#about-me">About Me</a>
             <a href="#work">Work</a>
             <a href="#contact-me">Contact Me</a>
-            <!--DONT FORGET TO ADD RESUME LINK -->
-            <a>resume</a>
         </nav>
     </header>
-
+<!-- create main section to hold main content of page -->
     <main>
+        <!-- create article class about for first section of main -->
         <article class="about">
             <h2 id="about-me">About Me</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -38,30 +37,33 @@
                 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                 deserunt mollit anim id est laborum</p>
         </article>
+        <!-- create article class work for second section of main -->
         <article class="work">
             <h2 id="work">Work</h2>
-            <!-- <section class="projects"> -->
-                <section class="boxes">
-                    <!-- add links to deployed applications with target=_blank to open in new window  -->
-                    <!-- change img tags to div, move src to background image link in css -->
-                    <a id="box-big" href="https://chesneyjulian.github.io/code-refactor-seo/" target="_blank">
-                        <img  src="./assets/images/green-blur-gradient.jpg">
-                            <figcaption class="overlay">Horiseon SEO <br> Code Refactor</figcaption>
-                    </a>
-                    <a class="box" href="https://chesneyjulian.github.io/prework-study-guide-1/" target="_blank">
-                        <img  src="./assets/images/green-blur-gradient.jpg">
-                            <figcaption class="overlay">Prework<br>Study Guide</figcaption>
-                    </a>
-                    <a class="box" href="https://chesneyjulian.github.io/css-snippet-cheat-sheet/" target="_blank">
-                        <img  src="./assets/images/green-blur-gradient.jpg">    
-                            <figcaption class="overlay">CSS Snippet<br>Cheat Sheet</figcaption>    
-                    </a>
-                    <a class="box" href="#placeholder-link">
-                        <img  src="./assets/images/green-blur-gradient.jpg">
-                        <figcaption class="overlay">Placeholder</figcaption>
-                    </a>
-                </section>
-            <!-- </section> -->
+            <!--create section class boxes to style project img links and captions -->
+            <section class="boxes">
+                <!-- add links to deployed applications with target=_blank to open in new window  -->
+                <!-- enclose img and figcaption into anchor tag to style together -->
+                <!-- give first box id of box-big to style differently from the rest -->
+                <a id="box-big" href="https://chesneyjulian.github.io/code-refactor-seo/" target="_blank">
+                    <img src="./assets/images/green-blur-gradient.jpg">
+                    <!-- add line break to force caption to take up 2 lines -->
+                    <figcaption class="overlay">Horiseon SEO <br> Code Refactor</figcaption>
+                </a>
+                <!-- give rest of boxes each a class of box to assign same css  -->
+                <a class="box" href="https://chesneyjulian.github.io/prework-study-guide-1/" target="_blank">
+                    <img src="./assets/images/green-blur-gradient.jpg">
+                    <figcaption class="overlay">Prework<br>Study Guide</figcaption>
+                </a>
+                <a class="box" href="https://chesneyjulian.github.io/css-snippet-cheat-sheet/" target="_blank">
+                    <img src="./assets/images/green-blur-gradient.jpg">
+                    <figcaption class="overlay">CSS Snippet<br>Cheat Sheet</figcaption>
+                </a>
+                <a class="box" href="#placeholder-link">
+                    <img src="./assets/images/green-blur-gradient.jpg">
+                    <figcaption class="overlay">Placeholder</figcaption>
+                </a>
+            </section>
         </article>
     </main>
 
