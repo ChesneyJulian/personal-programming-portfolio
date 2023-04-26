@@ -17,7 +17,7 @@ body {
 header {
     background-color: rgba(11, 31, 11, 0.657);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     padding: 10px;
 }
@@ -58,7 +58,7 @@ h1 {
 
 /* add hover color and cursor modifier for nav links */
 .nav-links a:hover {
-    color:rgb(6, 46, 29);
+    color:rgba(5, 218, 126, 0.871);
     cursor:grab;
 }
 
@@ -105,7 +105,6 @@ h2 {
 }
 
 .boxes a {
-
     transition: all .5s ease-in-out;
 }
 
@@ -129,12 +128,12 @@ h2 {
 }
 
 .overlay {
-   background-color: rgba(0, 0, 0, 0.649);
+   background-color: rgba(9, 110, 95, 0.789);
    position:absolute;
+   max-width: inherit;
    bottom: 50%;
    margin-left: 5px;
-   flex-flow: row wrap;
-
+   padding: 7px;
 }
 
 #box-big img{
@@ -146,24 +145,14 @@ h2 {
 footer {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-flow: row wrap;
     background-color:rgb(6, 46, 29);
     padding: 2%;
-    
 }
-
-footer ul {
-    display: flex;
-    list-style-type: none;
-    flex-direction: row ;
-    padding: 10px;
-    margin: 10px;
-    
-}
-
-footer ul li {
+footer .nav-links {
     align-self: center;
 }
+
 
 /* adjust styling and colors for screen media max width 992 */
 /* @media screen and (max-width: 768px) {
