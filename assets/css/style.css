@@ -8,6 +8,9 @@ html, * {
 body {
     display: flex;
     flex-flow: column wrap;
+    min-height: 100vh;
+    padding: 10px;
+    background-image: linear-gradient(to top, rgba(13, 56, 13, 0.69), rgba(202, 207, 202, 0.42));
 }
 
 /* add color, flex, and sizing to header element */
@@ -17,15 +20,13 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    height: 15vh;
-   
 }
 
 /* style to group this content together with flex */
 .personal-info {
     display: flex;
     flex-direction: row;
-    width: 60%;
+    margin: 10px;
 }
 
 /* style text, margin, and padding to main header */
@@ -44,8 +45,6 @@ h1 {
 
 .nav-links {
     display: flex;
-    flex-flow: row wrap;
-    align-self: flex-end;
     justify-content: space-evenly;
     
 }
@@ -53,115 +52,96 @@ h1 {
 .nav-links a {
     text-decoration: none;
     margin: 10px;
+    align-self: baseline;
+    text-align: center;
 }
 
 /* add hover color and cursor modifier for nav links */
-a:hover {
+.nav-links a:hover {
     color:rgb(6, 46, 29);
     cursor:grab;
 }
+
 /* add height and width to full vh, add display flex, align child elements to column with space between. add linear gradient background */
 main {
-    width: 100%;
-    height: 100vh;
+    margin: 20px;
+    min-height: 100vh;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     align-items: flex-start;
-    justify-content:space-evenly;
-    background-image: linear-gradient(to top, rgba(13, 56, 13, 0.69), rgba(202, 207, 202, 0.42));
+    align-content:space-evenly;
 }
+
 /* add flex positioning for article elements within main to make them align in a row with space between child items */
 article {
+    margin-left: 60px;
     display: flex;
-    padding: 5%;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
 }
+
 /* remove h2 margin and padding to align with top of flex box */
 h2 {
     font-size: 200%;
-    
+    padding: 3%;
 }
+
 /* add display flex and align element to flex-end with width to 60% to move text to right 60% of screen */
 .about p {
-    width: 60%;
+    margin-left: 500px;
+    margin-right: 80px;
     color:rgb(6, 46, 29);
     text-align: justify;
 }
 
 .work {
-    margin: 10px;
-    width: 90%;
-   
+    width: 100%;
 }
-.projects {
+
+.boxes {
+    position: relative;
     display: flex;
-    width: 75%;
 }
-/* add display for project links and transition presets */
-.projects a {
-    display: flex;
+
+.boxes a {
+
     transition: all .5s ease-in-out;
 }
-/* add transform for when project link is hovered over */
-.projects a:hover {
+
+.boxes a:hover {
     transform: scale(1.2);
 }
 
-.projects div {
+.box {
+    width: 30%;
+    padding: 10px;
     display: flex;
     flex-flow: row wrap;
-    height: 100px;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 20px;
+    
+}
+
+ .box img {
+    position: relative;
+    max-width: 100%;
+    border-radius: 50px;
+    /* padding: 8px; */
 }
 
 .overlay {
-   max-width: fit-content;
    background-color: rgba(0, 0, 0, 0.649);
-   display: flex;
+   position:absolute;
+   bottom: 50%;
+   margin-left: 5px;
    flex-flow: row wrap;
-   align-items: center;
 
 }
 
-
-.box {
-    width:fit-content;
+#box-big img{
+    border-radius: 50px;
+    padding:5px;
 }
 
-#box-big {
-    height: 250px;
-    width: 350px;
-    order: -1;
-    display: flex;
-    background-image: url("../images/green-blur-gradient.jpg");
-}
-
-.side-boxes {
-    display: flex;
-    flex-flow: row wrap; 
-    align-items: center;
-    height: 270px;
-    width: fit-content;
-}
-
-#prework {
-    background-image: url("../images/blue-gradient.jpg");
-    width: 95px;
-}
-
-#cheat-sheet {
-    background-image: url("../images/purple-gradient.webp");
-    width: 95px;
-}
-
-#placeholder {
-    background-image: url("../images/placeholder-img.png");
-    width: 95px;
-}
 
 footer {
     display: flex;
@@ -186,7 +166,7 @@ footer ul li {
 }
 
 /* adjust styling and colors for screen media max width 992 */
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 768px) {
     header {
         background-color: rgba(40, 37, 63, 0.889);
         display: flex;
@@ -203,7 +183,6 @@ footer ul li {
     }
 
     .nav-links {
-        display: flex;
         flex-flow: column wrap;
         align-items: center;
     }
@@ -222,7 +201,7 @@ footer ul li {
         width: 100%;
         height: 100vh;
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: row wrap;
         align-content: center;
         justify-content: flex-start;
         background-image: linear-gradient(to top, rgba(30, 6, 40, 0.69), rgba(214, 197, 227, 0.42));
@@ -243,11 +222,12 @@ footer ul li {
 
     .work {
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: column;
     }
 
     .projects {
-        flex-direction: row;
+        width: 100%;
+        flex-direction: column;
         justify-content: center;
     }
 
@@ -261,12 +241,18 @@ footer ul li {
     }
    
     #box-big {
-        height: 250px;
-        width: 660px;
         order: -1;
         display: flex;
         align-self: center;
         background-image: url("../images/green-blur-gradient.jpg");
     }
+    .side-boxes {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+    }
 
-}
+    .side-boxes a {
+        width: 100%;
+    }
+} */
