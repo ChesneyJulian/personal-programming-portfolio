@@ -129,6 +129,7 @@ h2 {
     padding: 7px;
     display: flex;
     align-self: center;
+    border-radius: 100px;
 }
 
 #box-big img {
@@ -199,6 +200,18 @@ footer .nav-links {
     
     main {
         max-width: 100%;
+        margin: unset;
+        flex-flow: column wrap;
     }
+
+    #box-big img {
+        max-width: 100%;
+    }
+
+    .overlay {
+        font-size: 80%;
+    }
+    
+    
 
 }
