@@ -67,11 +67,12 @@ main {
     min-height: 100vh;
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 
 /* add flex positioning for article elements within main to make them align in a row with space between child items */
 article {
-    margin-left: 60px;
+    margin:30px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -183,6 +184,11 @@ footer .nav-links {
         max-width: 30%;
         align-self: baseline;
     }
+
+    footer {
+        justify-content: center;
+        align-content: center;
+    }
 }
 
 @media screen and (max-width: 390px) {
@@ -212,6 +218,11 @@ footer .nav-links {
         font-size: 80%;
     }
     
+    footer {
+        max-width: 100%;
+    }
     
-
+    footer .nav-links {
+        flex-flow: column wrap;
+    }
 }
