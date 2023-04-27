@@ -6,7 +6,7 @@ html,
     color: white;
 }
 
-/* set display flex, column wrap, add padding around all of body, add background image linear gradient */
+/* set display flex, column wrap, add padding around all of body, add background image linear gradient, set min height 100vh */
 body {
     display: flex;
     flex-flow: column wrap;
@@ -33,7 +33,7 @@ header {
 
 /* style text, margin, and padding to main header */
 h1 {
-    font-size: 50px;
+    font-size: 300%;
     margin: 10px;
     padding: 5px;
 }
@@ -42,26 +42,26 @@ h1 {
 #avatar {
     width: 10%;
     border-radius: 125px;
-    flex: 0 1 10%;
 }
 
+/* set nav-links display to flex */
 .nav-links {
     display: flex;
 }
 
+/* set text decoration of anchor tags to none, set margin and text align center */
 .nav-links a {
     text-decoration: none;
     margin: 10px;
     text-align: center;
 }
 
-/* add hover color and cursor modifier for nav links */
+/* add hover color for nav links */
 .nav-links a:hover {
     color: rgba(5, 218, 126, 0.871);
-    cursor: grab;
 }
 
-/* add min height to 100 vh, add display flex, align child elements to column with space evenly. */
+/* add min height to 100 vh, add display flex, align child elements to row with space evenly. */
 main {
     margin: 20px;
     min-height: 100vh;
@@ -70,7 +70,7 @@ main {
     justify-content: space-evenly;
 }
 
-/* add flex positioning for article elements within main to make them align in a row with space between child items */
+/* add flex positioning for article elements within main to make child items flow in a row with space between  */
 article {
     margin:30px;
     display: flex;
@@ -86,8 +86,8 @@ h2 {
 
 /* add margin-left and right to position p, change color and text alignment*/
 .about p {
-    margin-left: 500px;
-    margin-right: 80px;
+    margin-left: 90px;
+    margin-right: 90px;
     color: rgb(6, 46, 29);
     text-align: justify;
 }
@@ -97,10 +97,10 @@ h2 {
 }
 
 .boxes {
-    position: relative;
     display: flex;
 }
 
+/* add transition settings for scale transformation when hovering */
 .boxes a {
     display: flex;
     transition: all .5s ease-in-out;
@@ -110,19 +110,21 @@ h2 {
     transform: scale(1.2);
 }
 
+/* style section containing projects */
 .box {
     padding: 5px;
     display: flex;
     flex-flow: row wrap;
-
 }
 
+/* set position to relative and max width so we can apply overlay element; style border radius */
 .box img {
     position: relative;
     max-width: 100%;
     border-radius: 50px;
 }
 
+/* style overlay text; position aboslute and display flex to keep in position over img */
 .overlay {
     background-color: rgba(9, 110, 95, 0.789);
     position: absolute;
@@ -139,7 +141,7 @@ h2 {
     position: relative;
 }
 
-
+/* style footer so it flows in row with space between content */
 footer {
     display: flex;
     justify-content: space-between;
@@ -155,6 +157,8 @@ footer .nav-links {
 
 /* adjust styling and colors for screen media max width 992 */
 @media screen and (max-width: 992px) {
+
+    /* align all header content into center of page */
     header {
         flex-flow: row wrap;
         justify-content: center;
@@ -164,27 +168,23 @@ footer .nav-links {
         justify-content: center;
     }
 
+    /* align all article content to center of page */
     article {
-        margin-left: 0;
         justify-content: center;
     }
 
-    .about p {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
+    /* set container for projects img links to flow in row and align center */
     .boxes {
-        position: relative;
         flex-flow: row wrap;
-        align-items: center;
+        justify-content: center;
     }
 
+    /* set max width to 30% for last three projects displayed */
     .box {
         max-width: 30%;
-        align-self: baseline;
     }
 
+    /* bring footer content closer together and aligned in center */
     footer {
         justify-content: center;
         align-content: center;
@@ -192,36 +192,46 @@ footer .nav-links {
 }
 
 @media screen and (max-width: 390px) {
+
+    /* change body to flow in row wrap */
     body {
-        display: flex;
         flex-flow: row wrap;
     }
 
+    /* adjust avatar sizing and align self in center */
     #avatar {
         height: 100px;
         width: auto;
-        border-radius: 125px;
         align-self: center;
     }
     
+    /* change main flow to column wrap */
     main {
-        max-width: 100%;
-        margin: unset;
         flex-flow: column wrap;
     }
-
-    #box-big img {
-        max-width: 100%;
+    
+    /* remove previous margin stylings for articles */
+    article {
+        margin: unset;
     }
 
+    /* change about p margin to 10 */
+    .about p {
+        margin:10px;
+    }
+
+    /* set box big img width and remove previous padding stylings */
+    #box-big img {
+        max-width: 100%;
+        padding: unset;
+    }
+
+    /* reduce overlay font size so it is smaller than the img */
     .overlay {
         font-size: 80%;
     }
     
-    footer {
-        max-width: 100%;
-    }
-    
+    /* set nav-links flow to column wrap */
     footer .nav-links {
         flex-flow: column wrap;
     }
