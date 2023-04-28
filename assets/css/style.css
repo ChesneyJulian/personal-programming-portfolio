@@ -99,6 +99,7 @@ h2 {
 
 .boxes {
     display: flex;
+    
 }
 
 /* add transition settings for scale transformation when hovering */
